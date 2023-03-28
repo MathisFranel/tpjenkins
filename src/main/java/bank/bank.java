@@ -13,12 +13,12 @@ public class bank {
         return accounts;
     }
     public void addAccount(Account account){
+        Account[] newAccounts = new Account[accounts.length + 1];
         for (int i = 0; i < accounts.length; i++) {
-            if (accounts[i] == null){
-                accounts[i] = account;
-                break;
-            }
+            newAccounts[i] = accounts[i];
         }
+        newAccounts[accounts.length] = account;
+        accounts = newAccounts;
     }
     public void transfer(Account account1, Account account2, double montant){
         account1.retrait(montant);

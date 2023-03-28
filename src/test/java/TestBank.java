@@ -7,7 +7,7 @@ import org.testng.Assert;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestBank {
-    @DisplayName("Account")
+    @DisplayName("Bank")
     @ParameterizedTest(name = "converting {0} should return {1}")
     @CsvSource({
             "1, 100, 0.1f"
